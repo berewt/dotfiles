@@ -1,0 +1,10 @@
+# Temp file
+*~
+
+# direnv
+.envrc
+.direnv/*
+
+# macos
+.DS_File
+.DS_Store

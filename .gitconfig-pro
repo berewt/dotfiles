@@ -1,0 +1,6 @@
+[user]
+  email = nicolas.biri@iohk.io
+  signingkey = BD5AEBEF27F2FA33
+
+[commit]
+  gpgsign = true
