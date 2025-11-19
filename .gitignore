@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# Except git root files
+!.git*
+
+# zsh Config
+.zshrc
+
+# neovim Config
+.config/nvim
