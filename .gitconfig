@@ -9,7 +9,7 @@
   path = .gitconfig-pro
 
 # Personal settings
-[includeIf "gitdir:~/Code/"]
+[includeIf "gitdir:~/Perso/"]
   path = .gitconfig-perso
 
 [filter "lfs"]

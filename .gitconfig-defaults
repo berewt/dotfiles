@@ -1,0 +1,12 @@
+[user]
+  name = Nicolas Biri
+  email = nicolas@biri.name
+
+[init]
+  defaultBranch = main
+
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore-defaults
+
+
