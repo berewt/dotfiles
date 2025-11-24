@@ -13,8 +13,8 @@ vim.keymap.set("n", "<C-n>", "<C-w>k")
 vim.keymap.set("n", "<C-s>", "<C-w>l")
 
 -- Search Move
-vim.keymap.set("n", "b", "n")
-vim.keymap.set("n", "B", "N")
+vim.keymap.set("n", "j", "n")
+vim.keymap.set("n", "N", "N")
 
 -- Replace overload
 vim.keymap.set("n", "l", "s")
