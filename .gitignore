@@ -1,11 +1,23 @@
 # Ignore everything
-*
+/*
 
 # Except git root files
 !.git*
 
 # zsh Config
-.zshrc
+!/.zshrc
+
+# Enable config files...
+!/.config
+
+# ... that are explicitly allowed
+/.config/*
 
 # neovim Config
-.config/nvim
+!.config/nvim
+
+# kitty Config
+!.config/kitty
+
+## No bak files
+*.bak
