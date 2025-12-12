@@ -20,4 +20,7 @@
 !.config/kitty
 
 ## No bak files
-*.bak
+**/*.bak
+
+## No lock files
+lazy-lock.json
