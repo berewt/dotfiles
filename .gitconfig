@@ -1,9 +1,6 @@
 [include]
   path = .gitconfig-defaults
 
-[help]
-  autocorrect = 1
-
 # Professional settings
 [includeIf "gitdir:~/Pro/"]
   path = .gitconfig-pro
@@ -11,17 +8,3 @@
 # Personal settings
 [includeIf "gitdir:~/Perso/"]
   path = .gitconfig-perso
-
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
-
-[merge]
-  tool = splice
-  conflictstyle = zdiff3
-
-[mergetool "vimdiff"]
-  cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED \
-        -c '$wincmd w' -c 'wincmd J'
