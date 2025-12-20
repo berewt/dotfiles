@@ -19,6 +19,12 @@
 # kitty Config
 !.config/kitty
 
+# nix Config
+!.config/nix
+!.config/nix/flake.nix
+.config/nix/flake.lock
+
+
 ## No bak files
 **/*.bak
 

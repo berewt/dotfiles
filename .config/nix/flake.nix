@@ -1,13 +1,17 @@
+# global `nix flake`
+# Install with `nix profile add ~/.config/nix`
+# It's a mess at the moment, as it contains way too many things
 {
-  description= "My development environment";
+  description= "My flake environment";
 
   inputs = {
     flake-utils.url = github:numtide/flake-utils;
     cardano-node.url = github:IntersectMBO/cardano-node;
     idris2-lsp.url = github:idris-community/idris2-lsp;
+    unison.url = github:ceedubs/unison-nix;
     };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs, flake-utils, cardano-node, idris2-lsp, unison }:
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -17,6 +21,7 @@
         paths = with pkgs; [
           delta
           direnv
+          docker
           duf
           entr
           fd
@@ -45,6 +50,7 @@
           protobuf
           ripgrep
           tectonic
+          scriv
           tldr
           tmux
           typst
@@ -52,7 +58,8 @@
         ]
         ++ [
           cardano-node.packages.${system}.default
-
+          idris2-lsp.packages.${system}.default
+          unison.packages.${system}.default
         ];
       };
     };
