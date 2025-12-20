@@ -1,13 +1,38 @@
-# Personal email is the default
-[user]
-  name = Nicolas Biri
-  email = nicolas@biri.name
+[core]
+  editor = nvim
+  pager = delta
+  excludesfile = ~/.gitignore-defaults
+
+# Configure delta (https://github.com/dandavison/delta)
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+
+[help]
+  autocorrect = 1
 
 [init]
   defaultBranch = main
 
-[core]
-  editor = nvim
-  excludesfile = ~/.gitignore-defaults
+[interactive]
+    diffFilter = delta --color-only
 
+[merge]
+  conflictstyle = zdiff3
+
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $BASE $REMOTE $MERGED \
+        -c '$wincmd w' -c 'wincmd J'
+
+# Personal email is the default
+[user]
+  name = Nicolas Biri
+  email = nicolas@biri.name
 
