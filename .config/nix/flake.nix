@@ -19,6 +19,7 @@
       packages.${system}.default = pkgs.buildEnv {
         name = "my-profile";
         paths = with pkgs; [
+          btop
           delta
           direnv
           docker
@@ -29,7 +30,6 @@
           ghostscript
           github-cli
           gnupg
-          htop
           idris2
           imagemagick
           jq
