@@ -40,3 +40,6 @@ alias vi=nvim
 alias nix-x86-shell="nix-shell --argstr system x86_64-darwin"
 alias kitty-unison="kitty --session=~/.config/kitty/sessions/unison.session"
 
+alias perso="cd ~/Perso"
+alias pro="cd ~/Pro"
+alias home="cd ~"
