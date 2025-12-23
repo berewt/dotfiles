@@ -20,7 +20,13 @@
     }:
     let
       system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        system = system;
+        config = {
+          allowUnfree = true;
+          allowUnfreePredicate = _: true;
+        };
+      };
     in
     {
       packages.${system}.default = pkgs.buildEnv {
@@ -29,6 +35,7 @@
           with pkgs;
           [
             btop
+            copilot
             delta
             direnv
             docker
