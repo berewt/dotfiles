@@ -35,7 +35,6 @@
           with pkgs;
           [
             btop
-            copilot
             delta
             direnv
             docker
@@ -44,7 +43,9 @@
             fd
             fzf
             ghostscript
+            gemini-cli
             git
+            github-copilot-cli
             github-cli
             gnupg
             idris2
