@@ -35,11 +35,13 @@
           with pkgs;
           [
             btop
+            claude-code
             delta
             direnv
             docker
             duf
             entr
+            just
             fd
             fzf
             ghostscript
@@ -50,6 +52,7 @@
             gnupg
             idris2
             imagemagick
+            iterm2
             jq
             kitty
             kubo
@@ -63,6 +66,7 @@
             nodejs
             nixfmt
             openssl
+            opencode
             pandoc
             pay-respects
             pnpm
@@ -70,10 +74,11 @@
             ripgrep
             tectonic
             scriv
+            iterm2
             tldr
-            tmux
             typst
             yarn
+            zellij
           ]
           ++ [
             cardano-node.packages.${system}.default

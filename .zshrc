@@ -4,6 +4,12 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH=$HOME/.pack/bin:$PATH
 export PATH=$HOME/.cabal/bin:$PATH
 
+# XDG Base Directories
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
 # oh-my-zsh configuration
 
 ZSH_THEME="af-magic"
@@ -37,9 +43,12 @@ eval "$(direnv hook zsh)"
 
 # Aliases
 alias vi=nvim
-alias nix-x86-shell="nix-shell --argstr system x86_64-darwin"
-alias kitty-unison="kitty --session=~/.config/kitty/sessions/unison.session"
 
 alias perso="cd ~/Perso"
 alias pro="cd ~/Pro"
 alias home="cd ~"
+
+alias nix-edit="${EDITOR:-nvim} ~/.config/nix/flake.nix"
+alias zsh-edit="${EDITOR:-nvim} ~/.zshrc"
+
+alias nix-profile-upgrade="nix profile upgrade --all"

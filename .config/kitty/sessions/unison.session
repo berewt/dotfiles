@@ -1,5 +1,0 @@
-layout fat:bias=50;full_size=1;mirrored=false
-
-launch --title "unison-editor" nvim
-launch --title "unison repl" ucm
-launch --title "terminal" zsh
