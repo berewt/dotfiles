@@ -74,6 +74,7 @@
             ripgrep
             tectonic
             scriv
+            spec-kit
             iterm2
             tldr
             typst
