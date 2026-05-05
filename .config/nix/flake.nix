@@ -5,7 +5,6 @@
   description = "My flake environment";
 
   inputs = {
-    cardano-node.url = "github:IntersectMBO/cardano-node";
     idris2-lsp.url = "github:idris-community/idris2-lsp";
     unison.url = "github:ceedubs/unison-nix";
   };
@@ -14,7 +13,6 @@
     {
       self,
       nixpkgs,
-      cardano-node,
       idris2-lsp,
       unison,
     }:
@@ -84,7 +82,6 @@
             zellij
           ]
           ++ [
-            # cardano-node.packages.${system}.default
             idris2-lsp.packages.${system}.default
             unison.packages.${system}.default
           ];
