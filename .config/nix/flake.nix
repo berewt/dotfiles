@@ -70,6 +70,7 @@
             pandoc
             pay-respects
             pnpm
+            poppler
             protobuf
             ripgrep
             tectonic
@@ -78,11 +79,12 @@
             iterm2
             tldr
             typst
+            uv
             yarn
             zellij
           ]
           ++ [
-            cardano-node.packages.${system}.default
+            # cardano-node.packages.${system}.default
             idris2-lsp.packages.${system}.default
             unison.packages.${system}.default
           ];
